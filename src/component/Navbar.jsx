@@ -9,13 +9,14 @@ const Navbar = () => {
         <div className="container">
             <div className="navbar">
                 <div className="right-side">
-                <img className="logo" src={netflix}></img>
+                    <img className="logo" src={netflix} alt="Netflix Logo" />
+                </div>
+                <div className="left-side">
+                    <button className="sign-in">Sign in</button>
                 </div>
             </div>
-            <div className="img" >
-                <img className="back-image" src={backimage}></img>
-            </div>
         </div>
+
     )
 }
 
