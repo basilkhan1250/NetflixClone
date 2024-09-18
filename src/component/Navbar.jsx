@@ -15,6 +15,11 @@ const Navbar = () => {
                     <button className="sign-in">Sign in</button>
                 </div>
             </div>
+            <div className="text-input">
+                <div className="text">
+                    <h1>Unlimited movies, TV shows, and more</h1>
+                </div>
+            </div>
         </div>
 
     )
