@@ -94,7 +94,7 @@
     /* padding-bottom: 50px;  */
 }
 
-.text-input h1 {
+.home-heading{
     font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", Roboto, Ubuntu, sans-serif;
     font-size: 56px;
     font-weight: 900;
@@ -117,7 +117,7 @@
     display: flex;
 }
 
-.input {
+.home-input {
     border-radius: 4px;
     border: 1px solid rgba(255, 255, 255, 0.479);
     background-color: rgba(20, 20, 20, 0.719);
@@ -130,7 +130,7 @@
 }
 
 
-.input:focus {
+.home-input:focus {
     cursor: text;
     color: white;
     border: 1px solid white;
@@ -185,7 +185,7 @@
 }
 
 /* Move label when input is focused */
-.input:focus~.floating-label {
+.home-input:focus~.floating-label {
     top: 12px;
     left: 10px;
     font-size: 12px;
@@ -194,7 +194,7 @@
 }
 
 /* Retain the label position after user clicks and fills the input */
-.input:not(:placeholder-shown)~.floating-label {
+.home-input:not(:placeholder-shown)~.floating-label {
     top: 10px;
     left: 10px;
     font-size: 10px;
@@ -208,9 +208,13 @@
 
 
 
+
+
+
+
+
 .sign-logo {
     max-width: 160px;
-    /* Adjust logo size as needed */
     height: auto;
     padding-right: 250px;
 }
@@ -218,19 +222,23 @@
 
 .sign-container {
     background-color: rgba(0, 0, 0, 0.6);
-    padding: 60px;
-    margin-top: 100px;
-    height: 60%;
+    /* padding: 60px; */
+    padding-top: 20px;
+    height: 300px;
+    padding-left: 65px;
+    padding-right: 65px;
+    margin-top: 120px;
     width: 320px;
     padding-bottom: 75%;
+    border-radius: 5px;
     margin-bottom: 40px;
 }
 
-.container h1 {
-    display: flex;
+.signin-heading {
+    text-align: start;
     font-size: 2em;
     font-weight: 700;
-    margin-bottom: 28px;
+    /* margin-bottom: 0px; */
 }
 
 .container .form-element {
@@ -239,12 +247,12 @@
     padding-bottom: 16px;
 }
 
-.form-element input {
+.signin-input{
     box-sizing: border-box;
     width: 100%;
     font-family: inherit;
     padding: 16px 20px 0 20px;
-    height: 50px;
+    height: 55px;
     font-size: 16px;
     border: 1px solid rgba(255, 255, 255, 0.479);
     border-radius: 5px;
@@ -253,14 +261,13 @@
     color: #ffffff;
 }
 
-.floating-label {
+.signin-floating-label {
     display: flex;
     box-sizing: border-box;
     width: 100%;
     position: absolute;
-    top: 35%;
-    padding-left: 10px;
-    /* right: 10px; */
+    top: 20%;
+    padding-left: 20px;
     font-size: 18px;
     cursor: text;
     color: #8c8c8c;
@@ -272,10 +279,10 @@
 
 .sign-btn {
     width: 100%;
-    height: 50px;
+    height: 40px;
     cursor: pointer;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 500;
     border-radius: 5px;
     border: none;
     color: #ffffff;
@@ -294,9 +301,10 @@
     background-color: #c11119;
 }
 
-input:focus~.floating-label,
-input:valid~.floating-label {
+input:focus~.signin-floating-label,
+input:valid~.signin-floating-label {
     font-size: 11px;
     top: 10px;
-    padding-left: 10px;
-}
+    font-weight: 800;
+    padding-left: 20px;
+} 
