@@ -42,9 +42,12 @@ const SignIn = () => {
                         </div>
                         <div className="back-to-the-page">
                             <p className="new-netflix">New to Netflix?</p>
-                            <Link className="back-to-page" to='/'>
+                            <a className="back-to-page" href='/'>
                                 <p className="back-page">Sign up now.</p>
-                            </Link>
+                            </a>
+                        </div>
+                        <div className="last-para">
+                            <p>This page is protected by Google reCAPTCHA to ensure you're not a bot. <span className="learn-more">Learn more.</span></p>
                         </div>
                     </form>
                 </div>

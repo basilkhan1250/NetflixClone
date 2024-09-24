@@ -14,6 +14,7 @@
     /* Center vertically */
     align-items: center;
     /* Center horizontally */
+    z-index: 1;
 }
 
 .container::before {
@@ -337,6 +338,11 @@ input:valid~.signin-floating-label {
 
 .password-forgot {
     margin: 0;
+    cursor: pointer;
+}
+
+.password-forgot:hover {
+    text-decoration: underline;
 }
 
 .check-box {
@@ -354,19 +360,22 @@ input:valid~.signin-floating-label {
 }
 
 .back-to-the-page {
-    position: relative;
-    top: -20px;
+    /* position: relative; */
+    /* top: -20px; */
     display: flex;
-    margin: 0;
+    /* margin: 0; */
     gap: 5px;
 }
 
 .new-netflix {
     opacity: 0.6;
+    margin: 0;
+    padding: 0;
 }
 
 
 .back-page {
+    margin: 0;
     font-weight: 600;
     cursor: pointer;
     color: white;
@@ -380,4 +389,35 @@ input:valid~.signin-floating-label {
 
 .back-page:visited {
     color: transparent;
+}
+
+
+
+.last-para {
+    margin-top: 0;
+    /* Remove any top margin */
+    position: relative;
+    /* Ensure it respects normal document flow */
+    top: -20px;
+    /* Move it upwards by 20px, adjust as needed */
+    text-align: start;
+    opacity: 0.5;
+    font-size: 14px;
+}
+
+
+.learn-more {
+    color: #0071eb;
+    cursor: pointer;
+}
+
+.learn-more:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    height: 550px;
+    width: 100%;
+    background-color: black;
+    z-index: 0;
 }
