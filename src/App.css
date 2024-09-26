@@ -1,6 +1,8 @@
 .App {
   text-align: center;
   background-color: black;
+  margin: 0;
+  box-sizing: border-box;
   /* background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/85ff76db-39e5-423a-afbc-97d3e74db71b/null/PK-en-20240909-TRIFECTA-perspective_4565b049-1863-4944-9509-e4ec4415ba9e_large.jpg"); */
 }
 
