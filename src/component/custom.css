@@ -518,3 +518,21 @@ input:valid~.signin-floating-label {
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
 }
+
+
+
+
+.trending {
+    background-color: black;
+    padding: 1px;
+}
+
+
+.trending-heading {
+    color: white;
+    padding-top: 10px;
+    padding-left: 10%;
+}
+.trending-ul{
+    display: flex;
+}
