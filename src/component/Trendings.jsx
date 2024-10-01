@@ -68,16 +68,17 @@ const Trendings = () => {
                         {Images.map(({ names, img }, i) => {
                             return (
                                 <li className="images-line">
-                                    <div className="number-div">
-                                        <span className="number">{i + 1}</span>
-                                    </div>
+                                <div className="number-div">
+                                    <span className="number">{i + 1}</span>
                                     <span className="image-span">
-                                        <img className="image" src={img}></img>
+                                        <img className="image" src={img} alt={`Image ${i + 1}`} />
                                     </span>
-                                </li>
+                                </div>
+                            </li>                            
                             )
                         })}
                     </ul>
+
                 </div>
             </div>
         </div>

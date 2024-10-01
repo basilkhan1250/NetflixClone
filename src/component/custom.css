@@ -533,10 +533,59 @@ input:valid~.signin-floating-label {
     padding-top: 10px;
     padding-left: 10%;
 }
-.trending-ul{
+
+.trending-ul {
     display: flex;
 }
-.number{
-    position: absolute;
-    color: white;
+
+
+
+
+.number {
+    z-index: 1;
+    padding: 0;
+    line-height: 0.5;
+    display: inline-block;
+    height: 1em;
+    position: relative;
+    font-weight: 900;
+    left: 35px;
+    color: rgb(5, 5, 5);
+    -webkit-text-stroke: 0.10rem #ffffff;
+    text-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+    font-size: 80px;
+    transition: transform 0.3s ease; /* Smooth transition for number scaling */
+    transform-origin: right center; /* Keeps the number position fixed during scaling */
+}
+
+.image {
+    border-radius: 10px;
+    max-width: 180px;
+    transition: transform 0.3s ease; /* Smooth transition for image scaling */
+    transform-origin: center center; /* Ensures the image scales from its center */
+}
+
+.images-line {
+    padding-top: 10px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    left: 80px;
+}
+
+.number-div {
+    position: relative;
+    display: flex;
+    align-items: end;
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.number-div:hover .number {
+    transform: scale(1.3); /* Increases the size of the number by 30% */
+    cursor: pointer;
+}
+
+.number-div:hover .image {
+    transform: scale(1.1); /* Increases the size of the image by 10% */
+    cursor: pointer;
 }
