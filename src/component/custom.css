@@ -536,3 +536,7 @@ input:valid~.signin-floating-label {
 .trending-ul{
     display: flex;
 }
+.number{
+    position: absolute;
+    color: white;
+}
