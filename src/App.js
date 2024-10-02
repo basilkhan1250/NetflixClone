@@ -14,7 +14,6 @@ function App() {
         <Route path='/SignIn' element={<SignIn />}></Route>
       </Routes>
       {/* <CurveLine></CurveLine> */}
-      <Trendings></Trendings>
     </div>
   );
 }
