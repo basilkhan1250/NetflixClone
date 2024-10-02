@@ -30,15 +30,15 @@ const Trendings = () => {
     const handleNextClick = () => {
 
         // Move to the next set of images
-        // setStartIndex((imagepreview) =>
-        //     imagepreview + imagesPerPage < Images.length ? imagepreview + imagesPerPage : 0
-        // )
+        setStartIndex((imagepreview) =>
+            imagepreview + imagesPerPage < Images.length ? imagepreview + imagesPerPage : 0
+        )
 
-        if (startIndex + imagesPerPage < Images.length) {
-            setStartIndex(startIndex + imagesPerPage);
-        } else {
-            setStartIndex(0)
-        }
+        // if (startIndex + imagesPerPage < Images.length) {
+        //     setStartIndex(startIndex + imagesPerPage);
+        // } else {
+        //     setStartIndex(0)
+        // }
     };
 
     const visibleImages = Images.slice(startIndex, startIndex + imagesPerPage);
