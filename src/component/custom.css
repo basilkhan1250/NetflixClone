@@ -409,7 +409,7 @@ input:valid~.signin-floating-label {
     font-size: 12px;
     padding-top: 4px;
     word-spacing: 2px;
-    
+
 }
 
 
@@ -538,14 +538,14 @@ input:valid~.signin-floating-label {
 /* Heading styling */
 .trending-heading {
     color: white;
-    padding-top: 10px;
+    padding-top: 40px;
     padding-left: 10%;
 }
 
-/* Image list container with slower transition */
 .trending-ul {
     display: flex;
-    transition: transform 1.5s ease-in-out; /* Slower transition for sliding */
+    transition: transform 3s ease-in-out;
+    /* Adjust transition speed for smoothness */
 }
 
 /* Number styling */
@@ -562,34 +562,40 @@ input:valid~.signin-floating-label {
     -webkit-text-stroke: 0.10rem #ffffff;
     text-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
     font-size: 80px;
-    transition: transform 0.2s ease; /* Smooth transition for number scaling */
-    transform-origin: right center; /* Keeps the number position fixed during scaling */
+    transition: transform 0.2s ease;
+    /* Smooth transition for number scaling */
+    transform-origin: right center;
+    /* Keeps the number position fixed during scaling */
 }
 
 /* Image styling */
 .image {
     border-radius: 10px;
     max-width: 180px;
-    transition: transform 0.2s ease; /* Smooth transition for image scaling */
-    transform-origin: center center; /* Ensures the image scales from its center */
+    transition: transform 0.2s ease;
+    transform-origin: center center;
 }
 
-/* Image container */
+.image-span {}
+
 .images-line {
     padding-top: 10px;
     position: relative;
     display: flex;
+    flex-basis: 100px;
     justify-content: space-between;
     left: 80px;
-    flex-shrink: 0;
-    width: 20%;
+    width: 220px;
 }
 
 /* Grid container */
 .trending-images-grid {
     display: flex;
     overflow: hidden;
-    width: 100%; /* Adjust width to fit 5 images */
+    width: 90%;
+    transition: transform 3s ease-in-out;
+
+    /* Adjust width to fit 5 images */
 }
 
 /* Number and image scaling on hover */
@@ -627,12 +633,32 @@ input:valid~.signin-floating-label {
 }
 
 .next-button:hover {
-    background-color: #444; /* Slight color change on hover */
+    background-color: #444;
 }
 
-/* Container for images and button */
+.pre-button {
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(26, 25, 25);
+    color: #fff;
+    height: 120px;
+    width: 22px;
+    position: absolute;
+    left: 100px;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color 0.1s ease;
+}
+
+.pre-button:hover {
+    background-color: #444;
+
+}
+
 .trending-images-container {
     display: flex;
     position: relative;
     align-items: center;
+    top: -20px;
 }

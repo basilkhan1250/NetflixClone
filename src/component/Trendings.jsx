@@ -33,13 +33,19 @@ const Trendings = () => {
         // setStartIndex((imagepreview) =>
         //     imagepreview + imagesPerPage < Images.length ? imagepreview + imagesPerPage : 0
         // )
-
         if (startIndex + imagesPerPage < Images.length) {
             setStartIndex(startIndex + imagesPerPage);
         } else {
             setStartIndex(0)
         }
     };
+
+    const handlePreClick = () => {
+        if (startIndex === 0) {
+            setStartIndex(startIndex - imagesPerPage)
+        }
+        else (setStartIndex(0))
+    }
 
     const visibleImages = Images.slice(startIndex, startIndex + imagesPerPage);
 
@@ -54,6 +60,10 @@ const Trendings = () => {
             </div>
             <div className="trending-images-container">
                 <div className="trending-images-grid">
+                    <div>
+                        {startIndex === 5 && <button className="pre-button" onClick={handlePreClick}>  &lt;
+                        </button>}
+                    </div>
                     <ul className="trending-ul">
                         {visibleImages.map(({ names, img }, i) => (
                             <li className="images-line" key={i}>
@@ -67,7 +77,8 @@ const Trendings = () => {
                         ))}
                     </ul>
                     <div >
-                        <button className="next-button" onClick={handleNextClick}></button>
+                        {startIndex === 0 && <button className="next-button" onClick={handleNextClick}>  &gt;
+                        </button>}
                     </div>
                 </div>
             </div>
