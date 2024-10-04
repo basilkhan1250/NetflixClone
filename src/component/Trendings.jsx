@@ -47,7 +47,7 @@ const Trendings = () => {
         else (setStartIndex(0))
     }
 
-    const visibleImages = Images.slice(startIndex, startIndex + imagesPerPage);
+    // const visibleImages = Images.slice(startIndex, startIndex + imagesPerPage);
 
     console.log(Images.slice(startIndex, startIndex + imagesPerPage))
 
@@ -60,12 +60,11 @@ const Trendings = () => {
             </div>
             <div className="trending-images-container">
                 <div className="trending-images-grid">
-                    <div>
-                        {startIndex === 5 && <button className="pre-button" onClick={handlePreClick}>  &lt;
-                        </button>}
+                    <div className="pre-button-div">
+                        {/* {startIndex === 5 && <button className="pre-button" onClick={handlePreClick}>  &lt;</button>} */}
                     </div>
                     <ul className="trending-ul">
-                        {visibleImages.map(({ names, img }, i) => (
+                        {Images.map(({ names, img }, i) => (
                             <li className="images-line" key={i}>
                                 <div className="number-div">
                                     <span className="number">{startIndex + i + 1}</span>
@@ -76,9 +75,8 @@ const Trendings = () => {
                             </li>
                         ))}
                     </ul>
-                    <div >
-                        {startIndex === 0 && <button className="next-button" onClick={handleNextClick}>  &gt;
-                        </button>}
+                    <div className="next-button-div">
+                        {/* {startIndex === 0 && <button className="next-button" onClick={handleNextClick}>  &gt;</button>} */}
                     </div>
                 </div>
             </div>

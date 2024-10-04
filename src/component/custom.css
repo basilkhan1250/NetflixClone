@@ -545,6 +545,12 @@ input:valid~.signin-floating-label {
 .trending-ul {
     display: flex;
     transition: transform 3s ease-in-out;
+    overflow-x: scroll;
+    overflow-y: visible;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+    scroll-margin-inline-start: 2.5em;
+    padding: 10px;
     /* Adjust transition speed for smoothness */
 }
 
@@ -574,6 +580,7 @@ input:valid~.signin-floating-label {
     max-width: 180px;
     transition: transform 0.2s ease;
     transform-origin: center center;
+    z-index: 10;
 }
 
 .image-span {}
@@ -584,7 +591,7 @@ input:valid~.signin-floating-label {
     display: flex;
     flex-basis: 100px;
     justify-content: space-between;
-    left: 80px;
+    left: -30px;
     width: 220px;
 }
 
@@ -592,9 +599,8 @@ input:valid~.signin-floating-label {
 .trending-images-grid {
     display: flex;
     overflow: hidden;
-    width: 90%;
+    width: 100%;
     transition: transform 3s ease-in-out;
-
     /* Adjust width to fit 5 images */
 }
 
@@ -631,6 +637,12 @@ input:valid~.signin-floating-label {
     transform: translateY(-50%);
     transition: background-color 0.1s ease;
 }
+.next-button-div{
+    z-index: 1;
+    height: 280px;
+    width: 350px;
+    border: 1px solid black;
+}
 
 .next-button:hover {
     background-color: #444;
@@ -650,10 +662,14 @@ input:valid~.signin-floating-label {
     transform: translateY(-50%);
     transition: background-color 0.1s ease;
 }
-
+.pre-button-div{
+    background-color: black;
+    z-index: 1;
+    width: 300px;
+    border: 1px solid black;
+}
 .pre-button:hover {
     background-color: #444;
-
 }
 
 .trending-images-container {
