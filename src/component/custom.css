@@ -695,7 +695,6 @@ input:valid~.signin-floating-label {
 
 .reasons {
     display: flex;
-    /* flex-basis: 25; */
     gap: 18px;
     justify-content: center;
     align-items: center;
@@ -712,10 +711,9 @@ input:valid~.signin-floating-label {
 .reason-div {
     background: linear-gradient(149deg, #192247 0%, #210e17 96.86%);
     flex-basis: 18%;
-
     border-radius: 15px;
     height: 300px;
-    width: 200px;
+    width: 210px;
     margin-bottom: 10px;
     padding: 7px;
 }
@@ -747,9 +745,26 @@ input:valid~.signin-floating-label {
         padding-left: 30px;
     }
 }
-.reason-div-img{
+.reason-div-img1{
     display: flex;
     position: relative;
     left: 183px;
+    top: 53px;
+}
+.reason-div-img2{
+    display: flex;
+    position: relative;
+    left: 182px;
+    top: 10px;
+}
+.reason-div-img3{
+    display: flex;
+    position: relative;
+    left: 182px;
     top: 52px;
+}
+.reason-div-img4{
+    display: flex;
+    position: relative;
+    left: 182px;
 }
