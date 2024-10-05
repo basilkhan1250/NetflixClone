@@ -700,12 +700,15 @@ input:valid~.signin-floating-label {
     align-items: center;
     color: white;
     flex-wrap: wrap;
+    padding-bottom: 10px;
 }
 
 .join-heading {
     display: flex;
-    padding-left: 10%;
+    padding-left: 10.2%;
     color: white;
+    position: relative;
+    top: 4px;
 }
 
 .reason-div {

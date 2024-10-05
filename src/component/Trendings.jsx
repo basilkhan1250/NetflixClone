@@ -81,6 +81,7 @@ const Trendings = () => {
                     </div>
                 </div>
             </div>
+            
             <div className="reason-to-join">
                 <div className="join-heading">
                     <h2>More Reasons to Join</h2>
