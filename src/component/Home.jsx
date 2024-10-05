@@ -22,7 +22,7 @@ const Navbar = () => {
                 </div>
                 <div className="text-input">
                     <div className="text">
-                        <h1 className="home-heading">Unlimited movies, <br />TV   shows, and more</h1>
+                        <h1 className="home-heading">Unlimited movies, TV <br />  shows, and more</h1>
                         <h3>Starts at Rs 250. Cancel anytime.</h3>
                         <p>Ready to watch? Enter your email to create or restart your membership.</p>
                         <div className="input-fill">
