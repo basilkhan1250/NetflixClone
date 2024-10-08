@@ -25,34 +25,58 @@ const Trendings = () => {
         { names: "Elite", img: Elite },
     ];
 
-    // State to control the start index of the displayed images
-    const [startIndex, setStartIndex] = useState(0);
-    const imagesPerPage = 5;
-    const handleNextClick = () => {
+    // const [addIndex, setAddIndex] = useState(0)
+    // const [isAdding, setIsAdding] = useState(true)
+    // const handleAddOrDel = () => {
+    //     if (isAdding) {
+    //         setAddIndex(addIndex + 1)
+    //         console.log(addIndex + 1)
+    //     }
+    //     else {
+    //         setAddIndex(addIndex - 1)
+    //         console.log(addIndex - 1)
+    //     }
+    //     setIsAdding(!isAdding)
+    //     console.log(!isAdding)
+    // }
 
-        // Move to the next set of images
-        // setStartIndex((imagepreview) =>
-        //     imagepreview + imagesPerPage < Images.length ? imagepreview + imagesPerPage : 0
-        // )
-        if (startIndex + imagesPerPage < Images.length) {
-            setStartIndex(startIndex + imagesPerPage);
-        } else {
-            setStartIndex(0)
-        }
+
+    const [isAdding, setIsAdding] = useState([false, false, false, false, false]); // Five questions
+
+    const handleAddOrDel = (index) => {
+        const updatedAdding = [...isAdding];
+        updatedAdding[index] = !updatedAdding[index]; // Toggle the visibility for the clicked question
+        setIsAdding(updatedAdding);
     };
 
-    const handlePreClick = () => {
-        if (startIndex === 0) {
-            setStartIndex(startIndex - imagesPerPage)
-        }
-        else (setStartIndex(0))
-    }
+
+    // const [startIndex, setStartIndex] = useState(0);
+    // const imagesPerPage = 5;
+    // const handleNextClick = () => {
+
+    // Move to the next set of images
+    // setStartIndex((imagepreview) =>
+    //     imagepreview + imagesPerPage < Images.length ? imagepreview + imagesPerPage : 0
+    // )
+    //     if (startIndex + imagesPerPage < Images.length) {
+    //         setStartIndex(startIndex + imagesPerPage);
+    //     } else {
+    //         setStartIndex(0)
+    //     }
+    // };
+
+    // const handlePreClick = () => {
+    //     if (startIndex === 0) {
+    //         setStartIndex(startIndex - imagesPerPage)
+    //     }
+    //     else (setStartIndex(0))
+    // }
 
     // const visibleImages = Images.slice(startIndex, startIndex + imagesPerPage);
 
-    console.log(Images.slice(startIndex, startIndex + imagesPerPage))
+    // console.log(Images.slice(startIndex, startIndex + imagesPerPage))
 
-    console.log("start index:", startIndex, "images per page", imagesPerPage);
+    // console.log("start index:", startIndex, "images per page", imagesPerPage);
 
     return (
 
@@ -69,7 +93,7 @@ const Trendings = () => {
                         {Images.map(({ names, img }, i) => (
                             <li className="images-line" key={i}>
                                 <div className="number-div">
-                                    <span className="number">{startIndex + i + 1}</span>
+                                    <span className="number">{+ 1}</span>
                                     <span className="image-span">
                                         <img className="image" src={img} alt={names} />
                                     </span>
@@ -119,42 +143,107 @@ const Trendings = () => {
                     <h2>Frequently Asked Questions</h2>
                 </div>
                 <div className="questions-div">
-                    <div className="Questions">
+                    <div className="Questions" onClick={() => handleAddOrDel(0)}>
                         <span className="qna">What is Netflix?</span>
-                        {/* <span className="plus">+</span> */}
-                        <div className="plus">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 36 36" width="36" height="36" data-icon="PlusLarge" aria-hidden="true" class="elj7tfr3 default-ltr-cache-1k5iouc-Icon-StyledAccordionIcon e164gv2o4"><path fill-rule="evenodd" clip-rule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor"></path></svg>
-                        </div>
+                        {isAdding[0] ? (
+                            <div className="minus">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 36 36" width="36" height="36">
+                                    <path fillRule="evenodd" clipRule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor" />
+                                </svg>
+                            </div>
+                        ) : (
+                            <div className="plus">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 36 36" width="36" height="36">
+                                    <path fillRule="evenodd" clipRule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor" />
+                                </svg>
+                            </div>
+                        )}
                     </div>
-                    <div className="Questions">
+
+                    <div className="Questions" onClick={() => handleAddOrDel(1)}>
                         <span className="qna">How much does Netflix cost?</span>
-                        <div className="plus1">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 36 36" width="36" height="36" data-icon="PlusLarge" aria-hidden="true" class="elj7tfr3 default-ltr-cache-1k5iouc-Icon-StyledAccordionIcon e164gv2o4"><path fill-rule="evenodd" clip-rule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor"></path></svg>
-                        </div>
+                        {isAdding[1] ? (
+                            <div className="minus1">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 36 36" width="36" height="36">
+                                    <path fillRule="evenodd" clipRule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor" />
+                                </svg>
+                            </div>
+                        ) : (
+                            <div className="plus1">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 36 36" width="36" height="36">
+                                    <path fillRule="evenodd" clipRule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor" />
+                                </svg>
+                            </div>
+                        )}
                     </div>
-                    <div className="Questions">
+
+                    {/* Repeat for other questions */}
+                    <div className="Questions" onClick={() => handleAddOrDel(2)}>
                         <span className="qna">Where can I Watch?</span>
-                        <div className="plus2">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 36 36" width="36" height="36" data-icon="PlusLarge" aria-hidden="true" class="elj7tfr3 default-ltr-cache-1k5iouc-Icon-StyledAccordionIcon e164gv2o4"><path fill-rule="evenodd" clip-rule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor"></path></svg>
-                        </div>
+                        {isAdding[2] ? (
+                            <div className="minus2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 36 36" width="36" height="36">
+                                    <path fillRule="evenodd" clipRule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor" />
+                                </svg>
+                            </div>
+                        ) : (
+                            <div className="plus2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 36 36" width="36" height="36">
+                                    <path fillRule="evenodd" clipRule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor" />
+                                </svg>
+                            </div>
+                        )}
                     </div>
-                    <div className="Questions">
+
+                    <div className="Questions" onClick={() => handleAddOrDel(3)}>
                         <span className="qna">How can I cancel?</span>
-                        <div className="plus3">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 36 36" width="36" height="36" data-icon="PlusLarge" aria-hidden="true" class="elj7tfr3 default-ltr-cache-1k5iouc-Icon-StyledAccordionIcon e164gv2o4"><path fill-rule="evenodd" clip-rule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor"></path></svg>
-                        </div>
+                        {isAdding[3] ? (
+                            <div className="minus3">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 36 36" width="36" height="36">
+                                    <path fillRule="evenodd" clipRule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor" />
+                                </svg>
+                            </div>
+                        ) : (
+                            <div className="plus3">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 36 36" width="36" height="36">
+                                    <path fillRule="evenodd" clipRule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor" />
+                                </svg>
+                            </div>
+                        )}
                     </div>
-                    <div className="Questions">
+
+                    <div className="Questions" onClick={() => handleAddOrDel(4)}>
                         <span className="qna">What can I watch on Netflix?</span>
-                        <div className="plus4">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 36 36" width="36" height="36" data-icon="PlusLarge" aria-hidden="true" class="elj7tfr3 default-ltr-cache-1k5iouc-Icon-StyledAccordionIcon e164gv2o4"><path fill-rule="evenodd" clip-rule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor"></path></svg>
-                        </div>
+                        {isAdding[4] ? (
+                            <div className="minus4">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 36 36" width="36" height="36">
+                                    <path fillRule="evenodd" clipRule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor" />
+                                </svg>
+                            </div>
+                        ) : (
+                            <div className="plus4">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 36 36" width="36" height="36">
+                                    <path fillRule="evenodd" clipRule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor" />
+                                </svg>
+                            </div>
+                        )}
                     </div>
-                    <div className="Questions">
+
+                    <div className="Questions" onClick={() => handleAddOrDel(5)}>
                         <span className="qna">Is Netflix good for kids?</span>
-                        <div className="plus5">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 36 36" width="36" height="36" data-icon="PlusLarge" aria-hidden="true" class="elj7tfr3 default-ltr-cache-1k5iouc-Icon-StyledAccordionIcon e164gv2o4"><path fill-rule="evenodd" clip-rule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor"></path></svg>
-                        </div>
+                        {isAdding[5] ? (
+                            <div className="minus5">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 36 36" width="36" height="36">
+                                    <path fillRule="evenodd" clipRule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor" />
+                                </svg>
+                            </div>
+                        ) : (
+                            <div className="plus5">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 36 36" width="36" height="36">
+                                    <path fillRule="evenodd" clipRule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor" />
+                                </svg>
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>

@@ -794,7 +794,6 @@ input:valid~.signin-floating-label {
     padding-top: 20px;
 }
 
-
 .Questions {
     display: flex;
     margin-bottom: 8px;
@@ -804,7 +803,7 @@ input:valid~.signin-floating-label {
     background-color: rgb(45, 45, 45);
     width: 1140PX;
     font-size: x-large;
-    color: white;
+    /* color: white; */
 }
 
 .Questions:hover {
@@ -816,8 +815,8 @@ input:valid~.signin-floating-label {
     font-weight: 500;
     display: flex;
     position: relative;
-    left: 20px;
-    top: 28px;
+    left: 22px;
+    padding-top: 25px;
 }
 
 .plus {
@@ -826,6 +825,17 @@ input:valid~.signin-floating-label {
     bottom: 15px;
     font-weight: 100;
     font-size: 70px;
+    transition: 0.1s;
+}
+
+.minus {
+    position: relative;
+    left: 920px;
+    bottom: 10px;
+    font-weight: 100;
+    font-size: 70px;
+    transition: 0.1s;
+    transform: rotateZ(45deg);
 }
 
 .plus1 {
@@ -834,6 +844,17 @@ input:valid~.signin-floating-label {
     bottom: 15px;
     font-weight: 100;
     font-size: 70px;
+    transition: 0.1s;
+}
+
+.minus1 {
+    position: relative;
+    left: 774px;
+    bottom: 10px;
+    font-weight: 100;
+    font-size: 70px;
+    transition: 0.1s;
+    transform: rotateZ(45deg);
 }
 
 .plus2 {
@@ -842,6 +863,17 @@ input:valid~.signin-floating-label {
     bottom: 15px;
     font-weight: 100;
     font-size: 70px;
+    transition: 0.1s;
+}
+
+.minus2 {
+    position: relative;
+    left: 875px;
+    bottom: 10px;
+    font-weight: 100;
+    font-size: 70px;
+    transition: 0.1s;
+    transform: rotateZ(45deg);
 }
 
 .plus3 {
@@ -849,7 +881,18 @@ input:valid~.signin-floating-label {
     left: 886px;
     bottom: 15px;
     font-weight: 100;
+    transition: 0.1s;
     font-size: 70px;
+}
+
+.minus3 {
+    position: relative;
+    left: 896px;
+    bottom: 10px;
+    font-weight: 100;
+    font-size: 70px;
+    transition: 0.1s;
+    transform: rotateZ(45deg);
 }
 
 .plus4 {
@@ -857,12 +900,35 @@ input:valid~.signin-floating-label {
     left: 768px;
     bottom: 15px;
     font-weight: 100;
+    transition: 0.1s;
     font-size: 70px;
 }
+
+.minus4 {
+    position: relative;
+    left: 778px;
+    bottom: 10px;
+    font-weight: 100;
+    font-size: 70px;
+    transition: 0.1s;
+    transform: rotateZ(45deg);
+}
+
 .plus5 {
     position: relative;
     left: 820px;
     bottom: 15px;
     font-weight: 100;
     font-size: 70px;
+    transition: 0.1s;
+}
+
+.minus5 {
+    position: relative;
+    left: 830px;
+    bottom: 10px;
+    font-weight: 100;
+    font-size: 70px;
+    transition: 0.1s;
+    transform: rotateZ(45deg);
 }
