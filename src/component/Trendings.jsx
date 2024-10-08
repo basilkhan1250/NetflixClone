@@ -93,7 +93,7 @@ const Trendings = () => {
                         {Images.map(({ names, img }, i) => (
                             <li className="images-line" key={i}>
                                 <div className="number-div">
-                                    <span className="number">{+ 1}</span>
+                                    <span className="number">{i + 1}</span>
                                     <span className="image-span">
                                         <img className="image" src={img} alt={names} />
                                     </span>
@@ -143,105 +143,139 @@ const Trendings = () => {
                     <h2>Frequently Asked Questions</h2>
                 </div>
                 <div className="questions-div">
-                    <div className="Questions" onClick={() => handleAddOrDel(0)}>
-                        <span className="qna">What is Netflix?</span>
-                        {isAdding[0] ? (
-                            <div className="minus">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 36 36" width="36" height="36">
-                                    <path fillRule="evenodd" clipRule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor" />
-                                </svg>
-                            </div>
-                        ) : (
-                            <div className="plus">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 36 36" width="36" height="36">
-                                    <path fillRule="evenodd" clipRule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor" />
-                                </svg>
-                            </div>
-                        )}
-                    </div>
-
-                    <div className="Questions" onClick={() => handleAddOrDel(1)}>
-                        <span className="qna">How much does Netflix cost?</span>
-                        {isAdding[1] ? (
-                            <div className="minus1">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 36 36" width="36" height="36">
-                                    <path fillRule="evenodd" clipRule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor" />
-                                </svg>
-                            </div>
-                        ) : (
-                            <div className="plus1">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 36 36" width="36" height="36">
-                                    <path fillRule="evenodd" clipRule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor" />
-                                </svg>
+                    <div className="QuestionsContainer">
+                        <div className="Questions" onClick={() => handleAddOrDel(0)}>
+                            <span className="qna">What is Netflix?</span>
+                            {isAdding[0] ? (
+                                <div className="minus">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 36 36" width="36" height="36">
+                                        <path fillRule="evenodd" clipRule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor" />
+                                    </svg>
+                                </div>
+                            ) : (
+                                <div className="plus">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 36 36" width="36" height="36">
+                                        <path fillRule="evenodd" clipRule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor" />
+                                    </svg>
+                                </div>
+                            )}
+                        </div>
+                        {isAdding[0] && (
+                            <div className="description">
+                                <p className="dp-one">Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.</p>
+                                <p className="dp-two">You can watch as much as you want, whenever you want without a single commercial – all for one low monthly price. There's always something new to discover and new TV shows and movies are added every week!</p>
                             </div>
                         )}
-                    </div>
 
-                    {/* Repeat for other questions */}
-                    <div className="Questions" onClick={() => handleAddOrDel(2)}>
-                        <span className="qna">Where can I Watch?</span>
-                        {isAdding[2] ? (
-                            <div className="minus2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 36 36" width="36" height="36">
-                                    <path fillRule="evenodd" clipRule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor" />
-                                </svg>
-                            </div>
-                        ) : (
-                            <div className="plus2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 36 36" width="36" height="36">
-                                    <path fillRule="evenodd" clipRule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor" />
-                                </svg>
+                        <div className="Questions" onClick={() => handleAddOrDel(1)}>
+                            <span className="qna">How much does Netflix cost?</span>
+                            {isAdding[1] ? (
+                                <div className="minus1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 36 36" width="36" height="36">
+                                        <path fillRule="evenodd" clipRule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor" />
+                                    </svg>
+                                </div>
+                            ) : (
+                                <div className="plus1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 36 36" width="36" height="36">
+                                        <path fillRule="evenodd" clipRule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor" />
+                                    </svg>
+                                </div>
+                            )}
+                        </div>
+                        {isAdding[1] && (
+                            <div className="description1">
+                                <p className="dp1-one">Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from Rs 250 to Rs 1,100 a month. No extra costs, no contracts.</p>
                             </div>
                         )}
-                    </div>
 
-                    <div className="Questions" onClick={() => handleAddOrDel(3)}>
-                        <span className="qna">How can I cancel?</span>
-                        {isAdding[3] ? (
-                            <div className="minus3">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 36 36" width="36" height="36">
-                                    <path fillRule="evenodd" clipRule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor" />
-                                </svg>
-                            </div>
-                        ) : (
-                            <div className="plus3">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 36 36" width="36" height="36">
-                                    <path fillRule="evenodd" clipRule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor" />
-                                </svg>
+                        <div className="Questions" onClick={() => handleAddOrDel(2)}>
+                            <span className="qna">Where can I Watch?</span>
+                            {isAdding[2] ? (
+                                <div className="minus2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 36 36" width="36" height="36">
+                                        <path fillRule="evenodd" clipRule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor" />
+                                    </svg>
+                                </div>
+                            ) : (
+                                <div className="plus2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 36 36" width="36" height="36">
+                                        <path fillRule="evenodd" clipRule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor" />
+                                    </svg>
+                                </div>
+                            )}
+                        </div>
+                        {isAdding[2] && (
+                            <div className="description2">
+                                <p className="dp2-one">Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.</p>
+                                <p className="dp2-two">You can also download your favorite shows with the iOS or Android app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.</p>
                             </div>
                         )}
-                    </div>
 
-                    <div className="Questions" onClick={() => handleAddOrDel(4)}>
-                        <span className="qna">What can I watch on Netflix?</span>
-                        {isAdding[4] ? (
-                            <div className="minus4">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 36 36" width="36" height="36">
-                                    <path fillRule="evenodd" clipRule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor" />
-                                </svg>
-                            </div>
-                        ) : (
-                            <div className="plus4">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 36 36" width="36" height="36">
-                                    <path fillRule="evenodd" clipRule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor" />
-                                </svg>
+                        <div className="Questions" onClick={() => handleAddOrDel(3)}>
+                            <span className="qna">How do I cancel?</span>
+                            {isAdding[3] ? (
+                                <div className="minus3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 36 36" width="36" height="36">
+                                        <path fillRule="evenodd" clipRule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor" />
+                                    </svg>
+                                </div>
+                            ) : (
+                                <div className="plus3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 36 36" width="36" height="36">
+                                        <path fillRule="evenodd" clipRule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor" />
+                                    </svg>
+                                </div>
+                            )}
+                        </div>
+                        {isAdding[3] && (
+                            <div className="description3">
+                                <p className="dp3-one">Netflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.</p>
                             </div>
                         )}
-                    </div>
 
-                    <div className="Questions" onClick={() => handleAddOrDel(5)}>
-                        <span className="qna">Is Netflix good for kids?</span>
-                        {isAdding[5] ? (
-                            <div className="minus5">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 36 36" width="36" height="36">
-                                    <path fillRule="evenodd" clipRule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor" />
-                                </svg>
+                        <div className="Questions" onClick={() => handleAddOrDel(4)}>
+                            <span className="qna">What can I watch on Netflix?</span>
+                            {isAdding[4] ? (
+                                <div className="minus4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 36 36" width="36" height="36">
+                                        <path fillRule="evenodd" clipRule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor" />
+                                    </svg>
+                                </div>
+                            ) : (
+                                <div className="plus4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 36 36" width="36" height="36">
+                                        <path fillRule="evenodd" clipRule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor" />
+                                    </svg>
+                                </div>
+                            )}
+                        </div>
+                        {isAdding[4] && (
+                            <div className="description4">
+                                <p className="dp4-one">Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.</p>
                             </div>
-                        ) : (
-                            <div className="plus5">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 36 36" width="36" height="36">
-                                    <path fillRule="evenodd" clipRule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor" />
-                                </svg>
+                        )}
+
+                        <div className="Questions" onClick={() => handleAddOrDel(5)}>
+                            <span className="qna">Is Netflix good for kids?</span>
+                            {isAdding[5] ? (
+                                <div className="minus5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 36 36" width="36" height="36">
+                                        <path fillRule="evenodd" clipRule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor" />
+                                    </svg>
+                                </div>
+                            ) : (
+                                <div className="plus5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 36 36" width="36" height="36">
+                                        <path fillRule="evenodd" clipRule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor" />
+                                    </svg>
+                                </div>
+                            )}
+                        </div>
+                        {isAdding[5] && (
+                            <div className="description5">
+                                <p className="dp5-one">The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and movies in their own space.</p>
+                                <p className="dp5-two">Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see.</p>
                             </div>
                         )}
                     </div>
