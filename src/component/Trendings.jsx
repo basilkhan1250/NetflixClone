@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Sector36 from "./asssets/1.png";
 import Sanivaaram from "./asssets/2.png";
 import KapilShow from "./asssets/3.png";
@@ -9,8 +9,7 @@ import SexLife from "./asssets/7.png";
 import Crew from "./asssets/8.png";
 import Kalki from "./asssets/9.png";
 import Elite from "./asssets/10.png";
-import add from "./asssets/add (5).png"
-import mainFooter from "./mainFooter";
+import MainFooter from "./MainFooter";
 
 const Trendings = () => {
     const Images = [
@@ -40,6 +39,55 @@ const Trendings = () => {
     //     setIsAdding(!isAdding)
     //     console.log(!isAdding)
     // }
+
+
+
+
+
+
+    // const fetch = require('node-fetch');
+
+    // const url = 'https://netflix-unofficial.p.rapidapi.com/api/genres';
+    // const options = {
+    //   method: 'GET',
+    //   headers: {
+    //     'x-rapidapi-key': 'd09239869emshf55a824a55ae015p14a3f5jsndbde726ffd4f',
+    //     'x-rapidapi-host': 'netflix-unofficial.p.rapidapi.com'
+    //   }
+    // };
+
+    // try {
+    //     const response = await fetch(url, options);
+    //     const result = await response.text();
+    //     console.log(result);
+    // } catch (error) {
+    //     console.error(error);
+    // }
+
+
+
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         const url = 'https://streaming-availability.p.rapidapi.com/shows/%7Btype%7D/%7Bid%7D';
+    //         const options = {
+    //             method: 'GET',
+    //             headers: {
+    //                 'x-rapidapi-key': 'd09239869emshf55a824a55ae015p14a3f5jsndbde726ffd4f',
+    //                 'x-rapidapi-host': 'streaming-availability.p.rapidapi.com'
+    //             }
+    //         };
+
+    //         try {
+    //             const response = await fetch(url, options);
+    //             const result = await response.text();
+    //             console.log(result);
+    //         } catch (error) {
+    //             console.error(error);
+    //         }
+    //     };
+    //     fetchData()
+    // }, [])
+
 
 
     const [isAdding, setIsAdding] = useState([false, false, false, false, false]); // Five questions
@@ -281,7 +329,7 @@ const Trendings = () => {
                     </div>
                 </div>
             </div>
-            <mainFooter></mainFooter>
+            <MainFooter></MainFooter>
         </div>
     );
 };

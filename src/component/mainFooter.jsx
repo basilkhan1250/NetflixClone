@@ -1,13 +1,13 @@
 import React from "react";
 
-const mainFooter = () => {
+const MainFooter = () => {
 
     return (
-        <div className="mainFooter">
+        <div className="MainFooter">
             <div>
                 <h1>basil</h1>
             </div>
         </div>
     )
 }
-export default mainFooter;
+export default MainFooter;
