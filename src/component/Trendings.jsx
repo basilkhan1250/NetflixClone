@@ -10,6 +10,7 @@ import Crew from "./asssets/8.png";
 import Kalki from "./asssets/9.png";
 import Elite from "./asssets/10.png";
 import add from "./asssets/add (5).png"
+import mainFooter from "./mainFooter";
 
 const Trendings = () => {
     const Images = [
@@ -136,7 +137,6 @@ const Trendings = () => {
                     </div>
                 </div>
             </div>
-
 
             <div className="asked-questions">
                 <div className="asked-heading">
@@ -281,6 +281,7 @@ const Trendings = () => {
                     </div>
                 </div>
             </div>
+            <mainFooter></mainFooter>
         </div>
     );
 };
