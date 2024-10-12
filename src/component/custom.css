@@ -1069,3 +1069,150 @@ input:valid~.signin-floating-label {
     top: -10px;
     left: 12px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+.text-mainfooter {
+    position: relative;
+    padding-top: 25px;
+}
+
+.para-mainfooter {
+    position: relative;
+    left: 462px;
+    padding-bottom: 2px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+.MainFooter {
+    color: white;
+    display: flex;
+}
+
+.home-input-mainfooter {
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.479);
+    background-color: rgba(20, 20, 20, 0.719);
+    justify-content: start;
+    width: 540px;
+    height: 28px;
+    padding: 10px;
+    padding-top: 15px;
+    color: white;
+}
+
+.floating-label-mainfooter {
+    position: absolute;
+    top: 25px;
+    font-weight: 400;
+    left: 16px;
+    opacity: 0.7;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: white;
+    transition: 0.2s ease all;
+    pointer-events: none;
+}
+
+.input-fill-mainfooter {
+    position: relative;
+    display: flex;
+    margin-bottom: 10px;
+    left: 330px;
+
+}
+
+.home-input-mainfooter:focus~.floating-label-mainfooter {
+    top: 12px;
+    left: 10px;
+    font-size: 12px;
+    color: white;
+    /* Label color when it floats */
+}
+
+/* Retain the label position after user clicks and fills the input */
+.home-input-mainfooter:not(:placeholder-shown)~.floating-label-mainfooter {
+    top: 10px;
+    left: 10px;
+    font-size: 10px;
+    color: white;
+}
+
+.btn-mainfooter {
+    height: 54px;
+    width: 210px;
+    margin-left: 6px;
+    border: 0px solid #e50914;
+    background-color: #e50914;
+    border-radius: 4px;
+    color: white;
+    font-size: 26px;
+    font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", Roboto, Ubuntu, sans-serif;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.btn-mainfooter:hover {
+    background-color: #c11119;
+    transition: 0.2s;
+}
+
+.contact-footer {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    font-size: 18px;
+    display: flex;
+    padding-left: 12%;
+    opacity: 0.7;
+    text-decoration: underline;
+}
+
+.footer-footer {
+    height: 490px;
+    width: 100%;
+    background-color: black;
+    z-index: 0;
+    color: white;
+    position: relative;
+    left: -22px;
+}
+
+.headings-footer {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 2%;
+    padding-right: 12%;
+    justify-content: flex-start;
+    padding-bottom: 20px;
+}
+
+.headings-footer p {
+    cursor: pointer;
+    text-decoration: underline;
+    padding-left: 11.8%;
+    text-align: start;
+    opacity: 0.7;
+    flex-basis: 13%;
+    margin: 5px 0;
+    padding-bottom: 2px;
+    font-size: 15px;
+}
+.last{
+    position: relative;
+    padding-left: 170px;
+    font-size: 14px;
+    top: 30px;
+    opacity: 0.6;
+}
