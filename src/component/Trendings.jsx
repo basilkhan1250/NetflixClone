@@ -9,7 +9,7 @@ import SexLife from "./asssets/7.png";
 import Crew from "./asssets/8.png";
 import Kalki from "./asssets/9.png";
 import Elite from "./asssets/10.png";
-import MainFooter from "./MainFooter";
+import MainFooter from "./MainFooter.jsx";
 
 const Trendings = () => {
     const Images = [
@@ -25,69 +25,6 @@ const Trendings = () => {
         { names: "Elite", img: Elite },
     ];
 
-    // const [addIndex, setAddIndex] = useState(0)
-    // const [isAdding, setIsAdding] = useState(true)
-    // const handleAddOrDel = () => {
-    //     if (isAdding) {
-    //         setAddIndex(addIndex + 1)
-    //         console.log(addIndex + 1)
-    //     }
-    //     else {
-    //         setAddIndex(addIndex - 1)
-    //         console.log(addIndex - 1)
-    //     }
-    //     setIsAdding(!isAdding)
-    //     console.log(!isAdding)
-    // }
-
-
-
-
-
-
-    // const fetch = require('node-fetch');
-
-    // const url = 'https://netflix-unofficial.p.rapidapi.com/api/genres';
-    // const options = {
-    //   method: 'GET',
-    //   headers: {
-    //     'x-rapidapi-key': 'd09239869emshf55a824a55ae015p14a3f5jsndbde726ffd4f',
-    //     'x-rapidapi-host': 'netflix-unofficial.p.rapidapi.com'
-    //   }
-    // };
-
-    // try {
-    //     const response = await fetch(url, options);
-    //     const result = await response.text();
-    //     console.log(result);
-    // } catch (error) {
-    //     console.error(error);
-    // }
-
-
-
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //         const url = 'https://streaming-availability.p.rapidapi.com/shows/%7Btype%7D/%7Bid%7D';
-    //         const options = {
-    //             method: 'GET',
-    //             headers: {
-    //                 'x-rapidapi-key': 'd09239869emshf55a824a55ae015p14a3f5jsndbde726ffd4f',
-    //                 'x-rapidapi-host': 'streaming-availability.p.rapidapi.com'
-    //             }
-    //         };
-
-    //         try {
-    //             const response = await fetch(url, options);
-    //             const result = await response.text();
-    //             console.log(result);
-    //         } catch (error) {
-    //             console.error(error);
-    //         }
-    //     };
-    //     fetchData()
-    // }, [])
-
 
 
     const [isAdding, setIsAdding] = useState([false, false, false, false, false]); // Five questions
@@ -97,35 +34,6 @@ const Trendings = () => {
         updatedAdding[index] = !updatedAdding[index]; // Toggle the visibility for the clicked question
         setIsAdding(updatedAdding);
     };
-
-
-    // const [startIndex, setStartIndex] = useState(0);
-    // const imagesPerPage = 5;
-    // const handleNextClick = () => {
-
-    // Move to the next set of images
-    // setStartIndex((imagepreview) =>
-    //     imagepreview + imagesPerPage < Images.length ? imagepreview + imagesPerPage : 0
-    // )
-    //     if (startIndex + imagesPerPage < Images.length) {
-    //         setStartIndex(startIndex + imagesPerPage);
-    //     } else {
-    //         setStartIndex(0)
-    //     }
-    // };
-
-    // const handlePreClick = () => {
-    //     if (startIndex === 0) {
-    //         setStartIndex(startIndex - imagesPerPage)
-    //     }
-    //     else (setStartIndex(0))
-    // }
-
-    // const visibleImages = Images.slice(startIndex, startIndex + imagesPerPage);
-
-    // console.log(Images.slice(startIndex, startIndex + imagesPerPage))
-
-    // console.log("start index:", startIndex, "images per page", imagesPerPage);
 
     return (
 
