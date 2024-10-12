@@ -9,7 +9,7 @@ import SexLife from "./asssets/7.png";
 import Crew from "./asssets/8.png";
 import Kalki from "./asssets/9.png";
 import Elite from "./asssets/10.png";
-import MainFooter from "./MainFooter";
+import MainFooter from "/Mainfooter";
 
 
 const Trendings = () => {
